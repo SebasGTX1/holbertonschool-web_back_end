@@ -1,1 +1,1 @@
-# ES6 Basics folder
+# ES6_Basics_folder
