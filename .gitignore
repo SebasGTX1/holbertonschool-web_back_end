@@ -1,0 +1,3 @@
+# ignore main test files
+*main*
+node_modules
