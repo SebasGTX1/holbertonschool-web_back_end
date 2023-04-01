@@ -5,8 +5,8 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
   const promises = [
     signUpUser(firstName, lastName),
     uploadPhoto(fileName)
-      .then((response) => ({ status: 'fulfilled', value: response.body }))
-      .catch((error) => ({ status: 'rejected', value: error })),
+      .then((response) => response.body)
+      .catch((error) => Promise.reject(error.toString())),
   ];
 
   return Promise.allSettled(promises);
